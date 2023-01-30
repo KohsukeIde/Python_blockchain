@@ -79,7 +79,7 @@ class Transaction(object):
         private_key = SigningKey.from_string(
             bytes().fromhex(self.sender_private_key), curve=NIST256p)
         private_key_sign = private_key.sign(message)
-        signature = private_key_sign.hex()
+        signature= private_key_sign.hex()
         return signature
 
 
@@ -107,3 +107,4 @@ if __name__ == '__main__':
 
     print('A', block_chain.calculate_total_amount(wallet_A.blockchain_address))
     print('B', block_chain.calculate_total_amount(wallet_B.blockchain_address))
+
